@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vote-deployment
+  namespace: vote-app
+spec:
+  selector:
+    matchLabels:
+      app: vote-deployment
+  template:
+    metadata:
+      labels:
+        app: vote-deployment
+    spec:
+      containers:
+      - name: vote-app
+        image: dockersamples/examplevotingapp_vote
+        ports:
+        - containerPort: 80
