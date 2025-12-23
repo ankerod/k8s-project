@@ -3,7 +3,7 @@ apiVersion: apps/v1
 kind: StatefulSet
 metadata:
   name: redis
-  namespace: database
+  namespace: vote-app
 spec:
   selector:
     matchLabels:

@@ -3,7 +3,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: redis-service
-  namespace: database
+  namespace: vote-app
 spec:
   selector:
     app: redis
